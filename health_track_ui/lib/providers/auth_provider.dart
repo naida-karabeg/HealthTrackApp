@@ -5,6 +5,7 @@ import '../models/user_model.dart';
 import '../models/login_request.dart';
 import '../models/register_request.dart';
 import '../services/auth_service.dart';
+import '../services/base_api_service.dart';
 
 class AuthProvider extends ChangeNotifier {
   final AuthService _authService = AuthService();
@@ -114,6 +115,10 @@ class AuthProvider extends ChangeNotifier {
     try {
       await _authService.logout();
       await _clearStorage();
+      
+      // Očisti cached token iz BaseApiService
+      final baseService = BaseApiService();
+      baseService.clearTokenCache();
       
       _currentUser = null;
       _errorMessage = null;

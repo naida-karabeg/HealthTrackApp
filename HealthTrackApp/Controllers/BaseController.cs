@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [Authorize]
     public class BaseController<TModel, TSearch> : ControllerBase where TSearch: BaseSearchObject
     {

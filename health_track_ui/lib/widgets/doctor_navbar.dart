@@ -175,7 +175,6 @@ class DoctorNavBar extends StatelessWidget implements PreferredSizeWidget {
             ],
           ),
           onTap: () {
-            // Zatvori menu prvo, pa onda logout
             Future.microtask(() => authProvider.logout());
           },
         ),
