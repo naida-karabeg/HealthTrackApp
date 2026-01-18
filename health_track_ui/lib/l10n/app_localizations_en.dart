@@ -224,4 +224,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get changeLanguage => 'Change Language';
+
+  @override
+  String get home => 'Home';
+
+  
+  @override
+  String get reports => 'Reports';
+
+  @override
+  String get searchByNameAndSurname => 'Search by name and surname';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get noPatients => 'No patients';
+
+  @override
+  String get nameAndSurname => 'Name and Surname';
+  
+  @override
+  String get status => 'Status';
+
+  @override
+  String get contact => 'Contact';
+
+  @override
+  String get addNewPatient => 'Add New Patient';
+
+ @override
+  String get details => 'Details';
 }

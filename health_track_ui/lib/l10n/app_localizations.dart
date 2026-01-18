@@ -116,6 +116,18 @@ abstract class AppLocalizations {
   String get bosnian;
   String get english;
   String get changeLanguage;
+  String get home;
+  String get reports;
+
+  String get searchByNameAndSurname;
+  String get search;
+  String get retry;
+  String get noPatients;
+  String get nameAndSurname;
+  String get status;
+  String get contact;
+  String get details;
+  String get addNewPatient;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

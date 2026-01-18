@@ -4,12 +4,12 @@ class ApiConstants {
   // Za lokalno testiranje na desktop-u: localhost
   // Za stvarni uređaj: IP adresa vašeg računara
   
-  static const String baseUrl = 'http://localhost:5183'; // Backend API port
+  static const String baseUrl = 'http://localhost:5183'; // Backend HTTP port
   static const String apiUrl = '$baseUrl/api';
   
   // Auth endpoints
-  static const String loginEndpoint = '$apiUrl/auth/login';
-  static const String registerEndpoint = '$apiUrl/auth/register';
+  static const String loginEndpoint = '$apiUrl/Auth/login';
+  static const String registerEndpoint = '$apiUrl/Auth/register';
   
   // Headers
   static Map<String, String> get headers => {

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../widgets/language_switcher.dart';
+import '../../utils/app_theme.dart';
 
 class AdminHomeScreen extends StatelessWidget {
   const AdminHomeScreen({super.key});
@@ -62,7 +63,7 @@ class AdminHomeScreen extends StatelessWidget {
                               const SizedBox(height: 4),
                               Chip(
                                 label: Text(user.role),
-                                backgroundColor: Colors.red.shade100,
+                                backgroundColor: AppColors.accentLight,
                               ),
                             ],
                           ),

@@ -82,6 +82,20 @@
   "comingSoon": "Uskoro dostupno",
   "unknownRole": "Nepoznata uloga korisnika",
   
+  "home": "Početna",
+  "patientManagement": "Upravljanje pacijentima",
+  "reports": "Izvještaji",
+  
+  "searchByNameAndSurname": "Pretraga po imenu i prezimenu",
+  "search": "Pretraži",
+  "nameAndSurname": "Ime i prezime",
+  "contact": "Kontakt",
+  "status": "Status",
+  "details": "Detalji",
+  "addNewPatient": "Dodaj novog pacijenta",
+  "noPatients": "Nema pacijenata",
+  "retry": "Pokušaj ponovo",
+  
   "language": "Jezik",
   "bosnian": "Bosanski",
   "english": "English",

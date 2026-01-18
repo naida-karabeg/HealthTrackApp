@@ -102,7 +102,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Komentirano za development kako bi Flutter mogao pristupiti preko HTTP
+// app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();

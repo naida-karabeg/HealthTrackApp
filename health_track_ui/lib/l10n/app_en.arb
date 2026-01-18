@@ -82,6 +82,20 @@
   "comingSoon": "Coming Soon",
   "unknownRole": "Unknown user role",
   
+  "home": "Home",
+  "patientManagement": "Patient Management",
+  "reports": "Reports",
+  
+  "searchByNameAndSurname": "Search by name and surname",
+  "search": "Search",
+  "nameAndSurname": "Name and surname",
+  "contact": "Contact",
+  "status": "Status",
+  "details": "Details",
+  "addNewPatient": "Add new patient",
+  "noPatients": "No patients",
+  "retry": "Retry",
+  
   "language": "Language",
   "bosnian": "Bosanski",
   "english": "English",

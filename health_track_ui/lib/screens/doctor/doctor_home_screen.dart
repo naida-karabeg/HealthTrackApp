@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../l10n/app_localizations.dart';
-import '../../widgets/language_switcher.dart';
+import '../../widgets/doctor_navbar.dart';
+import '../../utils/app_theme.dart';
 
 class DoctorHomeScreen extends StatelessWidget {
   const DoctorHomeScreen({super.key});
@@ -14,18 +15,7 @@ class DoctorHomeScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.doctorPortal),
-        actions: [
-          const LanguageSwitcher(),
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () async {
-              await authProvider.logout();
-            },
-          ),
-        ],
-      ),
+      appBar: const DoctorNavBar(currentPage: 'home'),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
@@ -53,7 +43,9 @@ class DoctorHomeScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'Dr. ${user.firstName} ${user.lastName}',
-                                style: Theme.of(context).textTheme.headlineSmall,
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineSmall,
                               ),
                               Text(
                                 user.email,
@@ -62,7 +54,7 @@ class DoctorHomeScreen extends StatelessWidget {
                               const SizedBox(height: 4),
                               Chip(
                                 label: Text(user.role),
-                                backgroundColor: Colors.blue.shade100,
+                                backgroundColor: AppColors.accentLight,
                               ),
                             ],
                           ),
@@ -91,9 +83,9 @@ class DoctorHomeScreen extends StatelessWidget {
                     title: l10n.appointments,
                     subtitle: l10n.myAppointments,
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l10n.comingSoon)),
-                      );
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(SnackBar(content: Text(l10n.comingSoon)));
                     },
                   ),
                   _buildMenuCard(
@@ -102,9 +94,9 @@ class DoctorHomeScreen extends StatelessWidget {
                     title: l10n.patients,
                     subtitle: l10n.myPatients,
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l10n.comingSoon)),
-                      );
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(SnackBar(content: Text(l10n.comingSoon)));
                     },
                   ),
                   _buildMenuCard(
@@ -113,9 +105,9 @@ class DoctorHomeScreen extends StatelessWidget {
                     title: l10n.diagnoses,
                     subtitle: l10n.diagnosesReview,
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l10n.comingSoon)),
-                      );
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(SnackBar(content: Text(l10n.comingSoon)));
                     },
                   ),
                   _buildMenuCard(
@@ -124,9 +116,9 @@ class DoctorHomeScreen extends StatelessWidget {
                     title: l10n.therapies,
                     subtitle: l10n.therapiesManagement,
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l10n.comingSoon)),
-                      );
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(SnackBar(content: Text(l10n.comingSoon)));
                     },
                   ),
                 ],
@@ -155,13 +147,13 @@ class DoctorHomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, size: 48, color: Theme.of(context).primaryColor),
+              Icon(icon, size: 48, color: AppColors.primary),
               const SizedBox(height: 12),
               Text(
                 title,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 4),

@@ -224,4 +224,37 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get changeLanguage => 'Promijeni jezik';
+
+   @override
+  String get home => 'Početna';
+
+  @override
+  String get reports => 'Izvještaji';
+
+  @override
+  String get searchByNameAndSurname => 'Pretraga po imenu i prezimenu';
+
+  @override
+  String get search => 'Pretraži';
+
+  @override
+  String get retry => "Ponovo pokušaj";
+
+  @override 
+  String get noPatients => "Bez pacijenata";
+
+  @override
+  String get nameAndSurname => 'Ime i prezime';
+
+  @override
+  String get status => 'Status';
+
+  @override
+  String get contact => 'Kontakt';
+
+  @override
+  String get addNewPatient => 'Dodaj novog pacijenta';
+
+  @override
+  String get details => 'Detalji';
 }

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../widgets/language_switcher.dart';
+import '../../utils/app_theme.dart';
 
 class PatientHomeScreen extends StatelessWidget {
   const PatientHomeScreen({super.key});
@@ -56,7 +57,7 @@ class PatientHomeScreen extends StatelessWidget {
                     const SizedBox(height: 8),
                     Chip(
                       label: Text(user.role),
-                      backgroundColor: Colors.green.shade100,
+                      backgroundColor: AppColors.accentLight,
                     ),
                   ],
                 ),
@@ -81,7 +82,7 @@ class PatientHomeScreen extends StatelessWidget {
                   context,
                   icon: Icons.calendar_month,
                   title: l10n.appointments,
-                  color: Colors.blue,
+                  color: AppColors.primary,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(l10n.comingSoon)),
@@ -92,7 +93,7 @@ class PatientHomeScreen extends StatelessWidget {
                   context,
                   icon: Icons.medical_information,
                   title: l10n.healthRecord,
-                  color: Colors.green,
+                  color: AppColors.success,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(l10n.comingSoon)),
@@ -103,7 +104,7 @@ class PatientHomeScreen extends StatelessWidget {
                   context,
                   icon: Icons.medication,
                   title: l10n.therapies,
-                  color: Colors.orange,
+                  color: AppColors.warning,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(l10n.comingSoon)),
@@ -114,7 +115,7 @@ class PatientHomeScreen extends StatelessWidget {
                   context,
                   icon: Icons.favorite,
                   title: l10n.health,
-                  color: Colors.red,
+                  color: AppColors.error,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(l10n.comingSoon)),
@@ -139,7 +140,7 @@ class PatientHomeScreen extends StatelessWidget {
                     const Icon(
                       Icons.info_outline,
                       size: 48,
-                      color: Colors.grey,
+                      color: AppColors.textSecondary,
                     ),
                     const SizedBox(height: 8),
                     Text(

@@ -3,10 +3,14 @@ import 'package:provider/provider.dart';
 import 'providers/auth_provider.dart';
 import 'providers/locale_provider.dart';
 import 'screens/auth/login_screen.dart';
+import 'screens/auth/register_screen.dart';
 import 'screens/admin/admin_home_screen.dart';
 import 'screens/doctor/doctor_home_screen.dart';
+import 'screens/doctor/patient_management_screen.dart';
 import 'screens/patient/patient_home_screen.dart';
 import 'l10n/app_localizations.dart';
+import 'utils/app_theme.dart';
+import 'utils/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,20 +34,16 @@ class MyApp extends StatelessWidget {
             locale: localeProvider.locale,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(
-                seedColor: Colors.blue,
-                brightness: Brightness.light,
-              ),
-              useMaterial3: true,
-              inputDecorationTheme: InputDecorationTheme(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                filled: true,
-              ),
-            ),
+            theme: AppTheme.lightTheme,
             home: const AuthWrapper(),
+            routes: {
+              AppRoutes.login: (context) => const LoginScreen(),
+              AppRoutes.register: (context) => const RegisterScreen(),
+              AppRoutes.adminHome: (context) => const AdminHomeScreen(),
+              AppRoutes.doctorHome: (context) => const DoctorHomeScreen(),
+              AppRoutes.doctorPatients: (context) => const PatientManagementScreen(),
+              AppRoutes.patientHome: (context) => const PatientHomeScreen(),
+            },
           );
         },
       ),
