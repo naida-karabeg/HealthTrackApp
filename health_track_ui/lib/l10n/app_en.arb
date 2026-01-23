@@ -99,5 +99,19 @@
   "language": "Language",
   "bosnian": "Bosanski",
   "english": "English",
-  "changeLanguage": "Change Language"
+  "changeLanguage": "Change Language",
+  
+  "newPatient": "New Patient",
+  "enterFullName": "Enter full name",
+  "enterPhoneNumber": "Enter phone number",
+  "phoneRequired": "Phone is required",
+  "height": "Height",
+  "weight": "Weight",
+  "medicalHistory": "Medical History",
+  "enterDiagnosis": "Enter diagnosis",
+  "enterTherapy": "Enter therapy",
+  "nextAppointment": "Next Appointment",
+  "active": "Active",
+  "save": "Save",
+  "patientAddedSuccessfully": "Patient added successfully"
 }

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    public class PatientController : BaseCRUDController<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest>
+    public class PatientController : BaseCRUDController<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest, string>
 
     {
         public PatientController(IPatientService service) : base(service)

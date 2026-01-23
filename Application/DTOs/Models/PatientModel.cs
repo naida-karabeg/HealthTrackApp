@@ -16,7 +16,10 @@ namespace Application.DTOs.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; } 
         public string Gender { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
         public string? EmergencyContact { get; set; }
         public string? BloodType { get; set; }
+        public string? PhoneNumber { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

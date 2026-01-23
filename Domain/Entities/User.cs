@@ -16,6 +16,7 @@ namespace Domain.Entities
         public string? Address { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
+        public bool IsActive { get; set; } = true;
 
         // Navigation properties
         public ICollection<Notification>? Notifications { get; set; }

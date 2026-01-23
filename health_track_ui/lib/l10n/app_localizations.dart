@@ -128,6 +128,29 @@ abstract class AppLocalizations {
   String get contact;
   String get details;
   String get addNewPatient;
+  String get selectBloodType;
+  String get selectGender;
+  String get patientAddedSuccessfully;
+  String get newPatient;
+  String get enterFullName;
+  String get enterPhoneNumber;
+  String get phoneRequired;
+  String get height;
+  String get weight;
+  String get medicalHistory;
+  String get enterDiagnosis;
+  String get enterTherapy;
+  String get nextAppointment;
+  String get active;
+  String get activate;
+  String get deactivate;
+  String get confirmation;
+  String get cancel;
+  String get areYouSureDeactivate;
+  String get areYouSureActivate;
+  String get patientDeactivatedSuccessfully;
+  String get patientActivatedSuccessfully;
+  String get save;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

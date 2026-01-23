@@ -3,31 +3,34 @@ using Application.Services.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers
+[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class BaseController<TModel, TSearch, TKey> : ControllerBase
+    where TSearch : BaseSearchObject
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    [Authorize]
-    public class BaseController<TModel, TSearch> : ControllerBase where TSearch: BaseSearchObject
+    protected readonly IService<TModel, TSearch, TKey> service;
+
+    public BaseController(IService<TModel, TSearch, TKey> service)
     {
-        protected IService<TModel, TSearch> service;
+        this.service = service;
+    }
 
-        public BaseController(IService<TModel, TSearch> service)
-        {
-            this.service = service;
-        }
+    [HttpGet]
+    public virtual IActionResult Get([FromQuery] TSearch search)
+    {
+        var result = service.GetPaged(search);
+        return Ok(result);
+    }
 
-        [HttpGet]
-        public virtual IActionResult Get([FromQuery] TSearch search)
-        {
-            var result = service.GetPaged(search);
-            return Ok(result);
-        }
+    [HttpGet("{id}")]
+    public virtual IActionResult GetById(TKey id)
+    {
+        var result = service.GetById(id);
 
-        [HttpGet("{id}")]
-        public virtual TModel Get(int id)
-        {
-            return service.GetById(id);
-        }
+        if (result == null)
+            return NotFound();
+
+        return Ok(result);
     }
 }

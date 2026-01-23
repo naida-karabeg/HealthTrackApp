@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Patient
 {
-    public interface IPatientService : ICRUDService<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest>
+    public interface IPatientService : ICRUDService<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest, string>
     {
 
     }

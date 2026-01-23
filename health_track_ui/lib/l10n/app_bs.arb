@@ -99,5 +99,19 @@
   "language": "Jezik",
   "bosnian": "Bosanski",
   "english": "English",
-  "changeLanguage": "Promijeni jezik"
+  "changeLanguage": "Promijeni jezik",
+  
+  "newPatient": "Novi pacijent",
+  "enterFullName": "Unesite ime",
+  "enterPhoneNumber": "Unesite telefonski broj",
+  "phoneRequired": "Telefon je obavezan",
+  "height": "Visina",
+  "weight": "Težina",
+  "medicalHistory": "Medicinska historija",
+  "enterDiagnosis": "Unesite dijagnozu",
+  "enterTherapy": "Unesite terapiju",
+  "nextAppointment": "Naredni zakazan termin",
+  "active": "Aktivan",
+  "save": "Sačuvaj",
+  "patientAddedSuccessfully": "Pacijent uspješno dodat"
 }

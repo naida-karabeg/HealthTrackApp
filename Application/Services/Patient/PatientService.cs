@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Patient
 {
-    public class PatientService : BaseCRUDService<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest, Domain.Entities.Patient>,
+    public class PatientService : BaseCRUDService<PatientModel, PatientSearchObject, PatientInsertRequest, PatientUpdateRequest, Domain.Entities.Patient, string>,
         IPatientService
     {
         private readonly UserManager<User> _userManager;
@@ -41,7 +41,7 @@ namespace Application.Services.Patient
             return Mapper.Map<PatientModel>(patient);
         }
 
-        public override PatientModel Update(int id, PatientUpdateRequest request)
+        public override PatientModel Update(string id, PatientUpdateRequest request)
         {
             var patient = _userManager.Users.OfType<Domain.Entities.Patient>()
                 .FirstOrDefault(p => p.Id == id.ToString());

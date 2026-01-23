@@ -257,4 +257,71 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get details => 'Detalji';
+
+  @override
+  String get patientAddedSuccessfully => 'Pacijent uspješno dodan';
+
+  @override
+  String get newPatient => 'Novi pacijent';
+
+  @override
+  String get enterFullName => 'Unesite ime i prezime';
+
+  @override
+  String get enterPhoneNumber => 'Unesite broj telefona';
+
+  @override
+  String get phoneRequired => 'Broj telefona je obavezan';
+
+  @override
+  String get height => 'Visina';
+
+  @override
+  String get weight => 'Težina';
+
+  @override
+  String get medicalHistory => 'Medicinska historija';
+
+  @override
+  String get enterDiagnosis => 'Unesite dijagnozu';
+
+  @override
+  String get enterTherapy => 'Unesite terapiju';
+
+  @override
+  String get nextAppointment => 'Naredni termin';
+
+  @override
+  String get active => 'Aktivan';
+
+  @override  String get activate => 'Aktiviraj';
+
+  @override
+  String get deactivate => 'Deaktiviraj';
+
+  @override
+  String get confirmation => 'Potvrda';
+
+  @override
+  String get cancel => 'Otkaži';
+
+  @override
+  String get areYouSureDeactivate => 'Da li ste sigurni da želite deaktivirati pacijenta';
+
+  @override
+  String get areYouSureActivate => 'Da li ste sigurni da želite aktivirati pacijenta';
+
+  @override
+  String get patientDeactivatedSuccessfully => 'Pacijent uspješno deaktiviran';
+
+  @override
+  String get patientActivatedSuccessfully => 'Pacijent uspješno aktiviran';
+
+  @override  String get save => 'Sačuvaj';
+
+  @override
+  String get selectBloodType => 'Izaberite krvnu grupu';
+
+  @override
+  String get selectGender => 'Izaberite pol';
 }

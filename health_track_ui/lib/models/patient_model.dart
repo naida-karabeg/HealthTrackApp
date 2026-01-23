@@ -1,5 +1,5 @@
 class PatientModel {
-  final int id;
+  final String id;
   final String firstName;
   final String lastName;
   final String email;
@@ -27,7 +27,7 @@ class PatientModel {
 
   factory PatientModel.fromJson(Map<String, dynamic> json) {
     return PatientModel(
-      id: json['id'] ?? 0,
+      id: json['patientId']?.toString() ?? '',
       firstName: json['firstName'] ?? '',
       lastName: json['lastName'] ?? '',
       email: json['email'] ?? '',
