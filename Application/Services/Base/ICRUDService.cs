@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Base
 {
-    public interface ICRUDService<TModel, TSearch, TInsert, TUpdate> where TModel : class where TSearch : BaseSearchObject
+    public interface ICRUDService<TModel, TSearch, TInsert, TUpdate, TKey> where TModel : class where TSearch : BaseSearchObject where TKey : notnull
     {
         TModel Insert(TInsert request);
-        TModel Update(int id, TUpdate request);
+        TModel Update(TKey id, TUpdate request);
     }
 }

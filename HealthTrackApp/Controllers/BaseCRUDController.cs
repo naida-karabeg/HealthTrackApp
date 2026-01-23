@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [Authorize]
-    public class BaseCRUDController<TModel, TSearch, TInsert, TUpdate> : BaseController<TModel, TSearch>
-        where TSearch : BaseSearchObject where TModel : class
+    public class BaseCRUDController<TModel, TSearch, TInsert, TUpdate, TKey> : BaseController<TModel, TSearch, TKey>
+        where TSearch : BaseSearchObject where TModel : class where TKey : notnull
     {
-        protected new ICRUDService<TModel, TSearch, TInsert, TUpdate> service;
-        public BaseCRUDController(ICRUDService<TModel, TSearch, TInsert, TUpdate> service) : base((IService<TModel, TSearch>)service)
+        protected new ICRUDService<TModel, TSearch, TInsert, TUpdate, TKey> service;
+        public BaseCRUDController(ICRUDService<TModel, TSearch, TInsert, TUpdate, TKey> service) : base((IService<TModel, TSearch, TKey>)service)
         {
             this.service = service;
         }
@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
-        public virtual TModel Update(int id, TUpdate request)
+        public virtual TModel Update(TKey id, TUpdate request)
         {
             return service.Update(id, request);
         }   

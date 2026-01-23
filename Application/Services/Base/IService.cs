@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Base
 {
-    public interface IService<TModel, TSearch> where TSearch: BaseSearchObject
+    public interface IService<TModel, TSearch, TKey> where TSearch: BaseSearchObject where TKey: notnull
     {
         public PagedResult<TModel> GetPaged(TSearch search);
-        public TModel GetById(int id);
+        public TModel GetById(TKey id);
     }
 }

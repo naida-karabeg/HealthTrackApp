@@ -13,6 +13,8 @@ class AppRoutes {
   // Doctor routes
   static const String doctorHome = '/doctor-home';
   static const String doctorPatients = '/doctor-patients';
+  static const String doctorPatientsAdd = '/doctor-patients-add';
+  static const String doctorPatientDetails = '/doctor-patient-details';
   static const String doctorAppointments = '/doctor-appointments';
   static const String doctorReports = '/doctor-reports';
   static const String doctorSettings = '/doctor-settings';

@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Base
 {
-    public class BaseService<TModel, TSearch, TDbEntity> : IService<TModel, TSearch>
+    public class BaseService<TModel, TSearch, TDbEntity, TKey> : IService<TModel, TSearch, TKey>
         where TModel : class
         where TSearch : BaseSearchObject
         where TDbEntity : class
+        where TKey: notnull
     {
         public ApplicationDbContext dbContext { get; set; }
         protected readonly IMapper Mapper;
@@ -24,9 +25,9 @@ namespace Application.Services.Base
             this.dbContext = dbContext;
             Mapper = mapper;
         }
-        public TModel GetById(int id)
+        public TModel GetById(TKey id)
         {
-            var entity = dbContext.Set<TModel>().Find(id);
+            var entity = dbContext.Set<TDbEntity>().Find(id);
 
             if(entity !=  null)
                 return Mapper.Map<TModel>(entity);

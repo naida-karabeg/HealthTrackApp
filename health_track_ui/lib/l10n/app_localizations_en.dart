@@ -258,4 +258,73 @@ class AppLocalizationsEn extends AppLocalizations {
 
  @override
   String get details => 'Details';
+
+  @override
+  String get patientAddedSuccessfully => 'Patient added successfully';
+
+  @override
+  String get newPatient => 'New Patient';
+
+  @override
+  String get enterFullName => 'Enter full name';
+
+  @override
+  String get enterPhoneNumber => 'Enter phone number';
+
+  @override
+  String get phoneRequired => 'Phone number is required';
+
+  @override
+  String get height => 'Height';
+
+  @override
+  String get weight => 'Weight';
+
+  @override
+  String get medicalHistory => 'Medical History';
+
+  @override
+  String get enterDiagnosis => 'Enter diagnosis';
+
+  @override
+  String get enterTherapy => 'Enter therapy';
+
+  @override
+  String get nextAppointment => 'Next Appointment';
+
+  @override
+  String get active => 'Active';
+
+  @override
+  String get activate => 'Activate';
+
+  @override
+  String get deactivate => 'Deactivate';
+
+  @override
+  String get confirmation => 'Confirmation';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get areYouSureDeactivate => 'Are you sure you want to deactivate patient';
+
+  @override
+  String get areYouSureActivate => 'Are you sure you want to activate patient';
+
+  @override
+  String get patientDeactivatedSuccessfully => 'Patient successfully deactivated';
+
+  @override
+  String get patientActivatedSuccessfully => 'Patient successfully activated';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get selectBloodType => 'Select blood type';
+
+  @override
+  String get selectGender => 'Select gender';
 }

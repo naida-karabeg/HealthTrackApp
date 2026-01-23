@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Base
 {
-    public class BaseCRUDService<TModel, TSearch, TInsert, TUpdate, TDbEntity> : BaseService<TModel, TSearch, TDbEntity>,
-        ICRUDService<TModel, TSearch, TInsert, TUpdate>
-        where TModel : class where TSearch : BaseSearchObject where TDbEntity : class
+    public class BaseCRUDService<TModel, TSearch, TInsert, TUpdate, TDbEntity, TKey> : BaseService<TModel, TSearch, TDbEntity, TKey>,
+        ICRUDService<TModel, TSearch, TInsert, TUpdate, TKey>
+        where TModel : class where TSearch : BaseSearchObject where TDbEntity : class where TKey : notnull
     {
         public BaseCRUDService(ApplicationDbContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {
@@ -33,7 +33,7 @@ namespace Application.Services.Base
         public virtual void BeforeUpdate(TUpdate request, TDbEntity entity)
         { }
 
-        public virtual TModel Update(int id, TUpdate request)
+        public virtual TModel Update(TKey id, TUpdate request)
         {
             var entity = Mapper.Map<TDbEntity>(request);
             BeforeUpdate(request, entity);

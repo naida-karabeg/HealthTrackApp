@@ -7,6 +7,8 @@ import 'screens/auth/register_screen.dart';
 import 'screens/admin/admin_home_screen.dart';
 import 'screens/doctor/doctor_home_screen.dart';
 import 'screens/doctor/patient_management_screen.dart';
+import 'screens/doctor/add_patient_screen.dart';
+import 'screens/doctor/patient_details_screen.dart';
 import 'screens/patient/patient_home_screen.dart';
 import 'l10n/app_localizations.dart';
 import 'utils/app_theme.dart';
@@ -36,12 +38,23 @@ class MyApp extends StatelessWidget {
             supportedLocales: AppLocalizations.supportedLocales,
             theme: AppTheme.lightTheme,
             home: const AuthWrapper(),
+            onGenerateRoute: (settings) {
+              // Handle routes with arguments
+              if (settings.name == AppRoutes.doctorPatientDetails) {
+                final patientId = settings.arguments as String;
+                return MaterialPageRoute(
+                  builder: (context) => PatientDetailsScreen(patientId: patientId),
+                );
+              }
+              return null;
+            },
             routes: {
               AppRoutes.login: (context) => const LoginScreen(),
               AppRoutes.register: (context) => const RegisterScreen(),
               AppRoutes.adminHome: (context) => const AdminHomeScreen(),
               AppRoutes.doctorHome: (context) => const DoctorHomeScreen(),
               AppRoutes.doctorPatients: (context) => const PatientManagementScreen(),
+              AppRoutes.doctorPatientsAdd: (context) => const AddPatientScreen(),
               AppRoutes.patientHome: (context) => const PatientHomeScreen(),
             },
           );
